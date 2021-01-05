@@ -1,0 +1,41 @@
+5
+11 Leo Tolstoy
+13 Anna Karenina
+5 roman
+126 Anna Karenina tells of the doomed love affair between the sensuous and rebellious Anna and the dashing officer, Count Vronsky.
+6 affair
+1877
+9.8
+1210
+11 Leo Tolstoy
+13 War and Piece
+5 roman
+72 A roman that reveals the strong and passionate love, even during the war
+4 love
+1865
+9.1
+1230
+18 Francis Fitzgerald
+16 The great Gitsby
+7 tragedy
+72 The novel chronicles an era that Fitzgerald himself dubbed the Jazz Age.
+19 crime, millionaires
+1925
+9.2
+1212
+19 William Shakespeare
+6 Hamlet
+7 tragedy
+160 Prince Hamlet exacts revenge on his uncle Claudius, who has murdered Hamlet's father, the King, and then taken the throne and married Gertrude, Hamlet's mother.
+5 drama
+1609
+8.7
+1242
+16 Nikola Vaptsarov
+10 Proshtalno
+6 poetry
+88 It is autobiographis poetry that shows the love of the poet in the moment of his death! 
+4 love
+1942
+9.2
+1243
