@@ -1,76 +1,80 @@
+// Created by Nikola Kirilov on 5.01.21.
+
+
 #include "User.h"
 
 User::User()
 {
-	setUsername("");
-	setPassword("");
-	setisAdmin(false);
+    setUsername("");
+    setPassword("");
+    setisAdmin(false);
 }
 
-User::User(const char* username, const char* password)
+User::User(std::string username, std::string password)
 {
-	setUsername(username);
-	setPassword(password);
-	setisAdmin(false);
+    setUsername(username);
+    setPassword(password);
+    setisAdmin(false);
 }
 
-User::User(const char* username, const char* password, bool isAdmin)
+User::User(std::string, std::string password, bool isAdmin)
 {
-	setUsername(username);
-	setPassword(password);
-	setisAdmin(isAdmin);
+    setUsername(username);
+    setPassword(password);
+    setisAdmin(isAdmin);
 }
 
-ofstream& User::saveUser(ofstream& os)
+std::ofstream& User::saveUser(std::ofstream& os)
 {
-		if (os.is_open())
-		{
-			os << this->username << endl;
-			os << this->password << endl;
-		}
-		else
-		{
-			cout << "Cannot open stream for saving user!" << endl;
-		}
-		return os;
+    if (os.is_open())
+        {
+            os << this->username << std::endl;
+            os << this->password << std::endl;
+        }
+    else
+        {
+            std::cout << "Cannot open stream for saving user!" << std::endl;
+        }
+    return os;
 }
 
-ifstream& User::readUser(ifstream& is)
+std::ifstream& User::readUser(std::ifstream& is)
 {
-	if (is.is_open())
-	{
-		is >> this->username;
-		is >> this->password;
-	}
-	return is;
+    if (is.is_open())
+        {
+            is >> this->username;
+            is >> this->password;
+        }
+    return is;
 
 }
 
-const char* User::getUsername()const
+std::string User::getUsername()const
 {
-	return this->username;
+    return this->username;
 }
 
-const char* User::getPassword()const
+std::string User::getPassword()const
 {
-	return this->password;
+    return this->password;
 }
 
 bool User::getisAdmin()const
 {
-	return this->isAdmin;
+    return this->isAdmin;
 }
 
-void User::setUsername(const char* username)
+void User::setUsername(std::string username)
 {
-	strcpy_s(this->username, strlen(username) + 1, username);
+    this->username = username;
 }
 
-void User::setPassword(const char* password)
+void User::setPassword(std::string password)
 {
-	strcpy_s(this->password, strlen(password) + 1, password);
+    this->password = password;
 }
 void User::setisAdmin(bool isAdmin)
 {
-	this->isAdmin = isAdmin;
+    this->isAdmin = isAdmin;
 }
+

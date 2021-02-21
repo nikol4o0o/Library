@@ -3,29 +3,39 @@
 #include <cstring>
 #include <fstream>
 
-using namespace std;
-
 class User
 {
 private:
-	char username[256];
-	char password[256];
-	bool isAdmin;
-public:
-	User();
-	User(const char* username, const char* password);
-	User(const char* username, const  char* password, bool isAdmin);
-	ofstream& saveUser(ofstream& os);
-	ifstream& readUser(ifstream& is);
+    std::string username;
+    std::string password;
+    bool isAdmin;
 
 public:
-	//Setters
-	void setUsername(const char* userame);
-	void setPassword(const char* password);
-	void setisAdmin(bool isAdmin);
-	//Getters
-	const char* getUsername()const;
-	const char* getPassword()const;
-	bool getisAdmin()const;
+    User();
+
+    User(std::string username, std::string password);
+
+    User(std::string username, std::string password, bool isAdmin);
+
+    std::ofstream &saveUser(std::ofstream &os);
+
+    std::ifstream &readUser(std::ifstream &is);
+
+public:
+    //Setters
+    void setUsername(std::string userame);
+
+    void setPassword(std::string password);
+
+    void setisAdmin(bool isAdmin);
+
+    //Getters
+    std::string getUsername() const;
+
+    std::string getPassword() const;
+
+    bool getisAdmin() const;
+
+
 };
 
